@@ -1,12 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Firebase Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Site Under Construction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: #00e6ff;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .footer {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello Firebase Hosting 🚀</h1>
+  <div class="container">
+    <h1>🚧 We’re Building Something Awesome</h1>
+    <p class="subtitle">
+      Our website is currently under construction.<br />
+      Please check back soon!
+    </p>
 
-  <script src="script.js"></script>
+    <div class="progress">
+      <div class="bar"></div>
+    </div>
+
+    <p class="footer">© 2025 Your Company Name</p>
+  </div>
+
+  <script>
+    let progress = 0;
+    const bar = document.querySelector(".bar");
+
+    const interval = setInterval(() => {
+      progress += 1;
+      bar.style.width = progress + "%";
+
+      if (progress >= 100) {
+        clearInterval(interval);
+      }
+    }, 40);
+  </script>
 </body>
 </html>
